@@ -1,3 +1,13 @@
+---
+title: HerbCalc
+emoji: 🌿
+colorFrom: green
+colorTo: green
+sdk: gradio
+sdk_version: "4.44.0"
+app_file: app.py
+pinned: false
+---
 # HerbCalc: Tools for Herbalists
 
 **Free, open-source calculators and reference tools for learning herbal formulation.**
