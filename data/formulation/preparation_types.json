@@ -1,0 +1,99 @@
+[
+  {
+    "id": "tincture",
+    "display_name": "Tincture (Hydroethanolic Extract)",
+    "solvent_system": "hydroethanolic",
+    "typical_ratios": {
+      "dried": ["1:4", "1:5"],
+      "fresh": ["1:1", "1:2"]
+    },
+    "alcohol_range_pct": { "min": 25, "max": 90 },
+    "maceration_time": { "min_days": 14, "typical_days": 28, "max_days": 42 },
+    "shelf_life": { "min_years": 3, "typical_years": 5, "notes": "Indefinite if properly stored and >20% alcohol" },
+    "storage": "Amber glass, cool, dark, tightly sealed",
+    "equipment": [
+      "glass jar with lid",
+      "scale (0.1g precision minimum)",
+      "graduated cylinder or measuring cup",
+      "fine mesh strainer or cheesecloth",
+      "press (potato ricer or tincture press)",
+      "amber glass bottles with dropper caps",
+      "labels"
+    ],
+    "process_summary": "Weigh herb, calculate menstruum, combine in jar, macerate with daily agitation, press and filter, bottle and label.",
+    "common_mistakes": [
+      "Using kitchen scale without 0.1g precision",
+      "Not accounting for ethanol concentration of source alcohol",
+      "Insufficient maceration time",
+      "Squeezing cheesecloth instead of pressing (low yield)"
+    ],
+    "required_solvents": ["ethanol", "water"],
+    "optional_solvents": ["glycerin"],
+    "calculator_tool": "menstruum_calc",
+    "pedagogical_notes": "The standard starting point for herbal extraction. Most herbs have published tincture ratios and alcohol percentages in monograph literature."
+  },
+  {
+    "id": "glycerite",
+    "display_name": "Glycerite (Glycerin Extract)",
+    "solvent_system": "glycerin-water",
+    "typical_ratios": {
+      "dried": ["1:5", "1:6"],
+      "fresh": ["1:2", "1:3"]
+    },
+    "alcohol_range_pct": null,
+    "maceration_time": { "min_days": 14, "typical_days": 28, "max_days": 42 },
+    "shelf_life": { "min_years": 1, "typical_years": 2, "notes": "Glycerin concentration must be above 55% for adequate preservation" },
+    "storage": "Amber glass, cool, dark, tightly sealed",
+    "equipment": [
+      "glass jar with lid",
+      "scale (0.1g precision minimum)",
+      "graduated cylinder or measuring cup",
+      "fine mesh strainer or cheesecloth",
+      "press (potato ricer or tincture press)",
+      "amber glass bottles with dropper caps",
+      "labels"
+    ],
+    "process_summary": "Weigh herb, prepare glycerin-water menstruum (typically 60-75% glycerin), combine in jar, macerate with daily agitation for 4-6 weeks, press and filter, bottle and label.",
+    "common_mistakes": [
+      "Using too little glycerin (below 55% — will not preserve)",
+      "Expecting the same extraction strength as alcohol-based tinctures",
+      "Not accounting for glycerin's high viscosity when pressing",
+      "Using synthetic glycerin instead of vegetable-derived USP grade"
+    ],
+    "required_solvents": ["glycerin", "water"],
+    "optional_solvents": [],
+    "calculator_tool": "menstruum_calc",
+    "pedagogical_notes": "Glycerites are alcohol-free alternatives suitable for children, recovering alcoholics, and those with alcohol sensitivities. They extract tannins and some flavonoids well, but are weaker for alkaloids and volatile oils. Sweet taste aids compliance."
+  },
+  {
+    "id": "standard_infusion",
+    "display_name": "Standard Infusion (Herbal Tea)",
+    "solvent_system": "aqueous",
+    "typical_ratios": {
+      "dried": ["1:20", "1:32"],
+      "fresh": ["1:10", "1:16"]
+    },
+    "alcohol_range_pct": null,
+    "maceration_time": { "min_days": null, "typical_days": null, "max_days": null },
+    "steep_time": { "min_minutes": 5, "typical_minutes": 15, "max_minutes": 30 },
+    "shelf_life": { "min_years": null, "typical_years": null, "notes": "Use within 24 hours. Refrigerate and use within 48-72 hours maximum." },
+    "storage": "Covered vessel during steeping. Refrigerate if not consumed immediately.",
+    "equipment": [
+      "kettle or pot",
+      "heat-safe vessel with lid (teapot, mason jar, French press)",
+      "fine mesh strainer or tea infuser",
+      "measuring spoon or scale"
+    ],
+    "process_summary": "Bring water to a boil (or just off boil for delicate herbs), pour over herb material in a covered vessel, steep for 10-20 minutes, strain, and drink.",
+    "common_mistakes": [
+      "Steeping uncovered (volatile oils escape with steam)",
+      "Using boiling water directly on delicate aromatics (damages volatile constituents)",
+      "Steeping too briefly for therapeutic dose (5 minutes is a beverage tea, not a medicinal infusion)",
+      "Using too little herb material (therapeutic dose typically requires 1-2 tablespoons per cup)"
+    ],
+    "required_solvents": ["water"],
+    "optional_solvents": ["honey"],
+    "calculator_tool": "infusion_calc",
+    "pedagogical_notes": "The simplest and most ancient form of herbal preparation. A standard medicinal infusion uses more herb and steeps longer than a beverage tea. Always cover the vessel during steeping to retain volatile oils. Best for leaves, flowers, and soft aerial parts."
+  }
+]

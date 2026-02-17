@@ -1,0 +1,39 @@
+[
+  {
+    "id": "beeswax",
+    "name": "Beeswax",
+    "type": "thickener",
+    "density_g_ml": 0.96,
+    "melting_point_c": { "low": 62, "high": 65 },
+    "usage_guidelines": {
+      "salve_soft": { "ratio": "1 oz per 10 oz oil", "beeswax_pct": 9.1 },
+      "salve_medium": { "ratio": "1 oz per 8 oz oil", "beeswax_pct": 11.1 },
+      "salve_firm": { "ratio": "1 oz per 5 oz oil", "beeswax_pct": 16.7 },
+      "lip_balm": { "ratio": "1 oz per 3 oz oil", "beeswax_pct": 25.0 }
+    },
+    "vegan_alternative": {
+      "name": "candelilla wax",
+      "ratio_adjustment": "use approximately half the amount",
+      "notes": "Higher melting point (68-73\u00b0C), harder result"
+    },
+    "safety": "Generally safe. Rare contact allergy possible.",
+    "sourcing_notes": "Cosmetic-grade or food-grade. Yellow (unfiltered) retains some propolis and aroma. White (filtered) is neutral.",
+    "notes": "Standard thickener for oil-based preparations."
+  },
+  {
+    "id": "shea_butter",
+    "name": "Shea Butter",
+    "type": "emollient",
+    "density_g_ml": 0.92,
+    "melting_point_c": { "low": 32, "high": 38 },
+    "usage_guidelines": {
+      "salve_modifier": { "ratio": "Replace up to 20-30% of carrier oil volume", "beeswax_pct": null },
+      "body_butter": { "ratio": "30-50% of total formulation", "beeswax_pct": null },
+      "lip_balm_modifier": { "ratio": "10-15% of total formulation, reduce beeswax slightly", "beeswax_pct": null }
+    },
+    "vegan_alternative": null,
+    "safety": "Generally safe. Derived from the nut of the shea tree (Vitellaria paradoxa). Those with severe tree nut allergies should exercise caution, though shea allergy is rare. Unrefined has a mild nutty scent.",
+    "sourcing_notes": "Unrefined (Grade A) retains more healing compounds including triterpenes and cinnamic acid esters. Refined is odorless but lacks some bioactive compounds. Fair-trade sourcing supports West African women's cooperatives.",
+    "notes": "Softens the texture of salves. Contains anti-inflammatory compounds (triterpene acetates). Melts at body temperature for excellent skin absorption. Reduces the amount of beeswax needed for a given consistency."
+  }
+]

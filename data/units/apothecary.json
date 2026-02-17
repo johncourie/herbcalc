@@ -1,0 +1,163 @@
+{
+  "units": [
+    {
+      "unit_name": "grain",
+      "symbol": "gr",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "mass",
+      "to_base": 0.06479891,
+      "base_unit": "gram",
+      "equivalence": "1 grain = 64.79891 mg (same in avoirdupois)",
+      "disambiguation": null,
+      "aliases": ["gr", "grain", "grains"]
+    },
+    {
+      "unit_name": "scruple",
+      "symbol": "\u2108",
+      "unicode_codepoint": "U+2108",
+      "system": "apothecary",
+      "type": "mass",
+      "to_base": 1.2959782,
+      "base_unit": "gram",
+      "equivalence": "20 grains = 1 scruple",
+      "disambiguation": null,
+      "aliases": ["scruple", "scruples", "\u2108"]
+    },
+    {
+      "unit_name": "dram_apothecary",
+      "symbol": "\u0292",
+      "unicode_codepoint": "U+0292",
+      "system": "apothecary",
+      "type": "mass",
+      "to_base": 3.8879346,
+      "base_unit": "gram",
+      "equivalence": "3 scruples = 60 grains = 1 dram ap",
+      "disambiguation": "Apothecary dram (3.888g) is more than double the avoirdupois dram (1.772g). This is the most dangerous unit confusion.",
+      "aliases": ["dram ap", "dram apothecary", "drams apothecary", "\u0292"]
+    },
+    {
+      "unit_name": "ounce_apothecary",
+      "symbol": "\u2125",
+      "unicode_codepoint": "U+2125",
+      "system": "apothecary",
+      "type": "mass",
+      "to_base": 31.1034768,
+      "base_unit": "gram",
+      "equivalence": "8 drams ap = 480 grains = 1 ounce ap",
+      "disambiguation": "Apothecary ounce (31.10g, 480 grains) is ~10% heavier than avoirdupois ounce (28.35g, 437.5 grains).",
+      "aliases": ["ounce ap", "ounce apothecary", "ounces apothecary", "\u2125", "oz ap"]
+    },
+    {
+      "unit_name": "pound_apothecary",
+      "symbol": "lb ap",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "mass",
+      "to_base": 373.2417216,
+      "base_unit": "gram",
+      "equivalence": "12 ounces ap = 5760 grains = 1 pound ap",
+      "disambiguation": "Apothecary pound has 12 ounces (373.24g); avoirdupois pound has 16 ounces (453.59g). A 21.5% difference.",
+      "aliases": ["lb ap", "pound ap", "pound apothecary", "pounds apothecary"]
+    },
+    {
+      "unit_name": "minim",
+      "symbol": "min",
+      "unicode_codepoint": "U+264F",
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 0.06161152,
+      "base_unit": "milliliter",
+      "equivalence": "1 minim = 0.0616 mL (the smallest apothecary volume unit)",
+      "disambiguation": null,
+      "aliases": ["min", "minim", "minims", "\u264f"]
+    },
+    {
+      "unit_name": "fluid_scruple",
+      "symbol": "fl \u2108",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 1.2322304,
+      "base_unit": "milliliter",
+      "equivalence": "20 minims = 1 fluid scruple",
+      "disambiguation": null,
+      "aliases": ["fl scruple", "fluid scruple", "fluid scruples"]
+    },
+    {
+      "unit_name": "fluid_dram",
+      "symbol": "f\u0292",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 3.6966912,
+      "base_unit": "milliliter",
+      "equivalence": "60 minims = 3 fluid scruples = 1 fluid dram",
+      "disambiguation": null,
+      "aliases": ["f\u0292", "fl dr", "fluid dram", "fluid drams", "fluidram", "fluidrams"]
+    },
+    {
+      "unit_name": "fluid_ounce_apothecary",
+      "symbol": "f\u2125",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 29.5735296,
+      "base_unit": "milliliter",
+      "equivalence": "8 fluid drams = 480 minims = 1 fluid ounce ap",
+      "disambiguation": null,
+      "aliases": ["f\u2125", "fl oz ap", "fluid ounce ap", "fluid ounce apothecary", "fluid ounces apothecary"]
+    },
+    {
+      "unit_name": "pint_apothecary",
+      "symbol": "O",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 473.176473,
+      "base_unit": "milliliter",
+      "equivalence": "16 fluid ounces ap = 1 pint ap",
+      "disambiguation": null,
+      "aliases": ["O", "pt ap", "pint ap", "pint apothecary", "pints apothecary", "octarius"]
+    },
+    {
+      "unit_name": "gallon_apothecary",
+      "symbol": "C",
+      "unicode_codepoint": null,
+      "system": "apothecary",
+      "type": "volume",
+      "to_base": 3785.41178,
+      "base_unit": "milliliter",
+      "equivalence": "8 pints ap = 128 fluid ounces ap = 1 gallon ap",
+      "disambiguation": null,
+      "aliases": ["C", "gal ap", "gallon ap", "gallon apothecary", "gallons apothecary", "congius"]
+    }
+  ],
+  "disambiguation_notes": [
+    {
+      "issue": "ounce",
+      "apothecary": "31.1035 g (480 grains, symbol \u2125)",
+      "avoirdupois": "28.3495 g (437.5 grains, symbol oz)",
+      "difference_pct": 9.7,
+      "note": "Apothecary ounce is ~10% heavier. Using the wrong ounce in a formula can cause clinically significant dosing errors."
+    },
+    {
+      "issue": "pound",
+      "apothecary": "373.24 g (12 ounces, 5760 grains)",
+      "avoirdupois": "453.59 g (16 ounces, 7000 grains)",
+      "difference_pct": 21.5,
+      "note": "Apothecary pound has 12 ounces; avoirdupois has 16. A 'pound' of herb means very different things depending on system."
+    },
+    {
+      "issue": "dram",
+      "apothecary": "3.888 g (60 grains)",
+      "avoirdupois": "1.772 g (27.344 grains)",
+      "difference_pct": 119.4,
+      "note": "Apothecary dram is more than double the avoirdupois dram. This is the most dangerous unit confusion."
+    },
+    {
+      "issue": "grain",
+      "note": "Grain is the SAME in both systems: 64.79891 mg. This is the one unit that does not diverge."
+    }
+  ]
+}

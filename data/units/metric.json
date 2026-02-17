@@ -1,0 +1,119 @@
+[
+  {
+    "unit_name": "microgram",
+    "symbol": "\u00b5g",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 0.000001,
+    "base_unit": "gram",
+    "aliases": ["\u00b5g", "mcg", "microgram", "micrograms"]
+  },
+  {
+    "unit_name": "milligram",
+    "symbol": "mg",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 0.001,
+    "base_unit": "gram",
+    "aliases": ["mg", "milligram", "milligrams"]
+  },
+  {
+    "unit_name": "centigram",
+    "symbol": "cg",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 0.01,
+    "base_unit": "gram",
+    "aliases": ["cg", "centigram", "centigrams"]
+  },
+  {
+    "unit_name": "decigram",
+    "symbol": "dg",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 0.1,
+    "base_unit": "gram",
+    "aliases": ["dg", "decigram", "decigrams"]
+  },
+  {
+    "unit_name": "gram",
+    "symbol": "g",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 1,
+    "base_unit": "gram",
+    "aliases": ["g", "gm", "gram", "grams"]
+  },
+  {
+    "unit_name": "decagram",
+    "symbol": "dag",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 10,
+    "base_unit": "gram",
+    "aliases": ["dag", "decagram", "decagrams", "dekagram", "dekagrams"]
+  },
+  {
+    "unit_name": "hectogram",
+    "symbol": "hg",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 100,
+    "base_unit": "gram",
+    "aliases": ["hg", "hectogram", "hectograms"]
+  },
+  {
+    "unit_name": "kilogram",
+    "symbol": "kg",
+    "system": "metric",
+    "type": "mass",
+    "to_base": 1000,
+    "base_unit": "gram",
+    "aliases": ["kg", "kilo", "kilogram", "kilograms"]
+  },
+  {
+    "unit_name": "microliter",
+    "symbol": "\u00b5L",
+    "system": "metric",
+    "type": "volume",
+    "to_base": 0.001,
+    "base_unit": "milliliter",
+    "aliases": ["\u00b5L", "mcL", "microliter", "microliters", "microlitre", "microlitres"]
+  },
+  {
+    "unit_name": "milliliter",
+    "symbol": "mL",
+    "system": "metric",
+    "type": "volume",
+    "to_base": 1,
+    "base_unit": "milliliter",
+    "aliases": ["mL", "ml", "milliliter", "milliliters", "millilitre", "millilitres", "cc"]
+  },
+  {
+    "unit_name": "centiliter",
+    "symbol": "cL",
+    "system": "metric",
+    "type": "volume",
+    "to_base": 10,
+    "base_unit": "milliliter",
+    "aliases": ["cL", "cl", "centiliter", "centiliters", "centilitre", "centilitres"]
+  },
+  {
+    "unit_name": "deciliter",
+    "symbol": "dL",
+    "system": "metric",
+    "type": "volume",
+    "to_base": 100,
+    "base_unit": "milliliter",
+    "aliases": ["dL", "dl", "deciliter", "deciliters", "decilitre", "decilitres"]
+  },
+  {
+    "unit_name": "liter",
+    "symbol": "L",
+    "system": "metric",
+    "type": "volume",
+    "to_base": 1000,
+    "base_unit": "milliliter",
+    "aliases": ["L", "l", "liter", "liters", "litre", "litres"]
+  }
+]

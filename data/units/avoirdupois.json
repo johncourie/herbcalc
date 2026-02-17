@@ -1,0 +1,75 @@
+{
+  "notes": "Avoirdupois is the standard commercial weight system in the US and UK. The grain is identical in both avoirdupois and apothecary systems (64.79891 mg). The systems diverge at the dram, ounce, and pound. Avoirdupois ounce (28.35g, 437.5 grains) differs from apothecary ounce (31.10g, 480 grains). Avoirdupois pound has 16 ounces; apothecary pound has 12.",
+  "units": [
+    {
+      "unit_name": "grain",
+      "symbol": "gr",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 0.06479891,
+      "base_unit": "gram",
+      "equivalence": "1 grain = 64.79891 mg (identical in apothecary system)",
+      "aliases": ["gr", "grain", "grains"]
+    },
+    {
+      "unit_name": "dram_avoirdupois",
+      "symbol": "dr av",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 1.7718452,
+      "base_unit": "gram",
+      "equivalence": "1 dram av = 27.344 grains = 1/16 ounce av",
+      "aliases": ["dr av", "dram av", "dram avoirdupois", "drams avoirdupois"]
+    },
+    {
+      "unit_name": "ounce_avoirdupois",
+      "symbol": "oz",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 28.349523,
+      "base_unit": "gram",
+      "equivalence": "1 oz av = 16 drams av = 437.5 grains",
+      "aliases": ["oz", "oz av", "ounce", "ounces", "ounce avoirdupois"]
+    },
+    {
+      "unit_name": "pound_avoirdupois",
+      "symbol": "lb",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 453.59237,
+      "base_unit": "gram",
+      "equivalence": "1 lb av = 16 ounces av = 7000 grains",
+      "aliases": ["lb", "lb av", "pound", "pounds", "pound avoirdupois", "lbs"]
+    },
+    {
+      "unit_name": "stone",
+      "symbol": "st",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 6350.29318,
+      "base_unit": "gram",
+      "equivalence": "1 stone = 14 pounds av",
+      "aliases": ["st", "stone", "stones"]
+    },
+    {
+      "unit_name": "hundredweight_short",
+      "symbol": "cwt",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 45359.237,
+      "base_unit": "gram",
+      "equivalence": "1 short hundredweight = 100 pounds av",
+      "aliases": ["cwt", "hundredweight", "hundredweight short", "short hundredweight"]
+    },
+    {
+      "unit_name": "ton_short",
+      "symbol": "ton",
+      "system": "avoirdupois",
+      "type": "mass",
+      "to_base": 907184.74,
+      "base_unit": "gram",
+      "equivalence": "1 short ton = 2000 pounds av = 20 short hundredweight",
+      "aliases": ["ton", "tons", "short ton", "short tons", "ton short"]
+    }
+  ]
+}

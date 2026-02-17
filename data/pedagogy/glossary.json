@@ -1,0 +1,38 @@
+[
+  {
+    "term": "menstruum",
+    "definition": "The liquid solvent or solvent mixture used to extract constituents from plant material. From Latin 'menstruum' (solvent). In tincture-making, the menstruum is typically a combination of ethanol and water, but can also include glycerin, vinegar, or oil depending on the preparation type.",
+    "related_terms": ["marc", "maceration", "extraction_ratio"],
+    "used_in_tools": ["menstruum_calc", "formula_builder"]
+  },
+  {
+    "term": "marc",
+    "definition": "The solid plant material remaining after extraction (pressing/straining). The marc is the spent herb that has been separated from the finished extract. In winemaking and herbal practice alike, the marc is typically composted. The quality of the press determines how much liquid is recovered from the marc.",
+    "related_terms": ["menstruum", "maceration", "tincture"],
+    "used_in_tools": ["menstruum_calc", "batch_log"]
+  },
+  {
+    "term": "tincture",
+    "definition": "A hydroethanolic (alcohol and water) extract of plant material, prepared by macerating the herb in a calculated menstruum for a defined period and then pressing to separate liquid from marc. Tinctures are the most common and versatile form of herbal extract, with typical shelf lives of 3-5+ years. The term specifically implies alcohol as the primary solvent; non-alcoholic liquid extracts have other names (glycerite, acetum, etc.).",
+    "related_terms": ["menstruum", "maceration", "extraction_ratio", "marc"],
+    "used_in_tools": ["menstruum_calc", "formula_builder", "dose_calc", "dry_extract"]
+  },
+  {
+    "term": "maceration",
+    "definition": "The process of soaking plant material in a solvent over an extended period to extract its constituents. In tincture-making, maceration typically lasts 2-6 weeks with daily agitation (shaking). The duration allows the solvent to penetrate cell walls and dissolve target compounds. Cold maceration (at room temperature) is standard; some preparations use warm or hot maceration for faster extraction.",
+    "related_terms": ["menstruum", "tincture", "extraction_ratio"],
+    "used_in_tools": ["menstruum_calc", "formula_builder", "batch_log"]
+  },
+  {
+    "term": "extraction_ratio",
+    "definition": "The weight-to-volume ratio of herb to menstruum in an extract, expressed as 1:X (e.g., 1:5 means 1 gram of herb per 5 mL of menstruum). For dried herbs, typical ratios range from 1:4 to 1:5. For fresh herbs, ratios of 1:1 to 1:2 are common because the plant's own water content contributes to the menstruum volume. The ratio determines the concentration of the finished extract and affects dosing.",
+    "related_terms": ["menstruum", "tincture", "maceration"],
+    "used_in_tools": ["menstruum_calc", "formula_builder", "dose_calc", "dry_extract"]
+  },
+  {
+    "term": "decoction",
+    "definition": "An aqueous extract prepared by simmering plant material in water, typically for 15-30 minutes or longer. Decoctions are used for hard, woody, or dense plant parts (roots, barks, seeds, dried berries) that require more heat and time to release their constituents than a standard infusion provides. The simmering process reduces total volume, resulting in a more concentrated preparation than an infusion. Decoctions must be used within 24-72 hours or preserved.",
+    "related_terms": ["menstruum", "maceration"],
+    "used_in_tools": ["infusion_calc", "syrup_calc"]
+  }
+]

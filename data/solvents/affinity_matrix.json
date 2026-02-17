@@ -1,0 +1,68 @@
+{
+  "matrix": [
+    {
+      "constituent_class": "alkaloids",
+      "display_name": "Alkaloids",
+      "description": "Nitrogen-containing organic compounds with pharmacological activity. Examples: berberine, caffeine, morphine, nicotine.",
+      "solvent_affinity": {
+        "ethanol_high": "good",
+        "ethanol_medium": "good",
+        "ethanol_low": "moderate",
+        "water_hot": "moderate",
+        "water_cold": "poor",
+        "glycerin": "poor",
+        "acetic_acid": "good",
+        "fixed_oil": "poor"
+      },
+      "notes": "Extraction depends on salt form vs free base. Acidic solvents (vinegar) convert alkaloids to salts, improving aqueous solubility. Some alkaloids (e.g., berberine) are water-soluble as salts."
+    },
+    {
+      "constituent_class": "volatile_oils",
+      "display_name": "Volatile Oils (Essential Oils)",
+      "description": "Aromatic terpene-based compounds responsible for plant fragrance and many therapeutic effects. Examples: menthol, thymol, linalool, chamazulene.",
+      "solvent_affinity": {
+        "ethanol_high": "good",
+        "ethanol_medium": "moderate",
+        "ethanol_low": "poor",
+        "water_hot": "poor",
+        "water_cold": "poor",
+        "glycerin": "poor",
+        "acetic_acid": "poor",
+        "fixed_oil": "good"
+      },
+      "notes": "Volatile oils are lipophilic and require high-alcohol or oil-based solvents. Hot water causes evaporative loss — cover infusions to retain volatile oils. Steam distillation is the standard isolation method but not relevant to simple extraction."
+    },
+    {
+      "constituent_class": "polysaccharides",
+      "display_name": "Polysaccharides",
+      "description": "Complex carbohydrates including immunomodulating beta-glucans and structural fibers. Examples: inulin, beta-glucan, arabinogalactans.",
+      "solvent_affinity": {
+        "ethanol_high": "none",
+        "ethanol_medium": "poor",
+        "ethanol_low": "moderate",
+        "water_hot": "good",
+        "water_cold": "moderate",
+        "glycerin": "moderate",
+        "acetic_acid": "moderate",
+        "fixed_oil": "none"
+      },
+      "notes": "Water is the primary solvent for polysaccharides. Hot water decoction is optimal. Ethanol actually precipitates polysaccharides out of solution — this is used industrially to isolate them. Dual extraction (water + alcohol sequentially) captures both polysaccharides and alcohol-soluble constituents."
+    },
+    {
+      "constituent_class": "tannins_hydrolyzable",
+      "display_name": "Tannins (Hydrolyzable)",
+      "description": "Polyphenolic compounds that bind and precipitate proteins. Hydrolyzable tannins are esters of gallic or ellagic acid with glucose. Examples: gallotannins, ellagitannins.",
+      "solvent_affinity": {
+        "ethanol_high": "moderate",
+        "ethanol_medium": "good",
+        "ethanol_low": "good",
+        "water_hot": "good",
+        "water_cold": "moderate",
+        "glycerin": "good",
+        "acetic_acid": "moderate",
+        "fixed_oil": "none"
+      },
+      "notes": "Hydrolyzable tannins are more water-soluble than condensed tannins. Glycerin is notably effective for tannin extraction. Medium-alcohol tinctures (40-60%) capture tannins well. High alcohol concentrations can reduce tannin solubility."
+    }
+  ]
+}

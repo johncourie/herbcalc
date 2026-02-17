@@ -1,0 +1,240 @@
+{
+  "abbreviations": [
+    {
+      "abbreviation": "aa",
+      "latin": "ana",
+      "meaning": "of each (equal quantities)",
+      "category": "quantity",
+      "usage_example": "Rx: Tincture valerian aa tincture passionflower = equal parts of each",
+      "notes": "Very common in compound formulas. Indicates equal proportions."
+    },
+    {
+      "abbreviation": "q.s.",
+      "latin": "quantum sufficit",
+      "meaning": "a sufficient quantity",
+      "category": "quantity",
+      "usage_example": "q.s. ad 100 mL = add enough [solvent] to bring total volume to 100 mL",
+      "notes": "One of the most important pharmacy abbreviations. Used when exact quantity depends on context."
+    },
+    {
+      "abbreviation": "gtt",
+      "latin": "guttae",
+      "meaning": "drops",
+      "category": "quantity",
+      "usage_example": "gtt iii = 3 drops",
+      "notes": "Singular: gutta (gt). Plural: guttae (gtt). Imprecise unit; volume varies by dropper and liquid."
+    },
+    {
+      "abbreviation": "b.i.d.",
+      "latin": "bis in die",
+      "meaning": "twice a day",
+      "category": "frequency",
+      "usage_example": "Sig: 30 gtt b.i.d. = Take 30 drops twice daily",
+      "notes": null
+    },
+    {
+      "abbreviation": "t.i.d.",
+      "latin": "ter in die",
+      "meaning": "three times a day",
+      "category": "frequency",
+      "usage_example": "Sig: 1 tsp t.i.d. = Take 1 teaspoon three times daily",
+      "notes": "The most common dosing frequency for herbal tinctures."
+    },
+    {
+      "abbreviation": "tr",
+      "latin": "tinctura",
+      "meaning": "tincture",
+      "category": "form",
+      "usage_example": "Tr. Echinacea = Tincture of Echinacea",
+      "notes": "Also written as 'tinct.' Both are standard abbreviations for tincture."
+    },
+    {
+      "abbreviation": "tinct",
+      "latin": "tinctura",
+      "meaning": "tincture",
+      "category": "form",
+      "usage_example": "Tinct. Valerianae = Tincture of Valerian",
+      "notes": "Longer form of 'tr.' Followed by the genitive (Latin possessive) form of the herb name."
+    },
+    {
+      "abbreviation": "Sig.",
+      "latin": "signa",
+      "meaning": "write on label; directions to patient",
+      "category": "instruction",
+      "usage_example": "Sig: 30 gtt t.i.d. in water = Label: Take 30 drops three times daily in water",
+      "notes": "Introduces the patient instructions section of a prescription or formula."
+    },
+    {
+      "abbreviation": "Rx",
+      "latin": "recipe",
+      "meaning": "take (recipe); prescription header",
+      "category": "instruction",
+      "usage_example": "Rx: Tr. Echinacea \u2125ii = Take: Tincture of Echinacea, 2 ounces",
+      "notes": "From Latin 'recipe' (imperative: take). Opens a prescription or formula. The symbol \u211e is a stylized abbreviation with possible origins in the Eye of Horus or Jupiter symbol."
+    },
+    {
+      "abbreviation": "stat",
+      "latin": "statim",
+      "meaning": "immediately; at once",
+      "category": "frequency",
+      "usage_example": "Administer stat = Give immediately",
+      "notes": "Used for single urgent doses. Rarely needed in herbal practice but appears in clinical settings."
+    },
+    {
+      "abbreviation": "p.r.n.",
+      "latin": "pro re nata",
+      "meaning": "as needed; as the situation arises",
+      "category": "frequency",
+      "usage_example": "30 gtt p.r.n. for anxiety = 30 drops as needed for anxiety",
+      "notes": "Very common in herbal dosing. Implies a maximum frequency should also be specified."
+    },
+    {
+      "abbreviation": "h.s.",
+      "latin": "hora somni",
+      "meaning": "at bedtime (at the hour of sleep)",
+      "category": "frequency",
+      "usage_example": "Sig: 60 gtt h.s. = Take 60 drops at bedtime",
+      "notes": "Common for sedative and nervine formulas."
+    },
+    {
+      "abbreviation": "a.c.",
+      "latin": "ante cibum",
+      "meaning": "before meals",
+      "category": "frequency",
+      "usage_example": "Sig: 1 tsp a.c. = Take 1 teaspoon before meals",
+      "notes": "Important for bitters and digestive formulas which work best on an empty stomach."
+    },
+    {
+      "abbreviation": "p.c.",
+      "latin": "post cibum",
+      "meaning": "after meals",
+      "category": "frequency",
+      "usage_example": "Sig: 1 tsp p.c. = Take 1 teaspoon after meals",
+      "notes": "Used for herbs that may cause gastric irritation on an empty stomach."
+    },
+    {
+      "abbreviation": "q.i.d.",
+      "latin": "quater in die",
+      "meaning": "four times a day",
+      "category": "frequency",
+      "usage_example": "Sig: 20 gtt q.i.d. = Take 20 drops four times daily",
+      "notes": null
+    },
+    {
+      "abbreviation": "caps",
+      "latin": "capsula",
+      "meaning": "capsule",
+      "category": "form",
+      "usage_example": "Disp: caps No. xxx = Dispense 30 capsules",
+      "notes": "Modern herbal practice uses '00' or '0' size vegetarian capsules most commonly."
+    },
+    {
+      "abbreviation": "pulv",
+      "latin": "pulvis",
+      "meaning": "powder",
+      "category": "form",
+      "usage_example": "Pulv. Glycyrrhizae = Powder of Licorice",
+      "notes": "Refers to finely ground herb material, suitable for capsule filling or direct use."
+    },
+    {
+      "abbreviation": "syr",
+      "latin": "syrupus",
+      "meaning": "syrup",
+      "category": "form",
+      "usage_example": "Syr. Althaeae = Syrup of Marshmallow",
+      "notes": "Herbal syrups use sugar or honey as the preservative base for aqueous extracts."
+    },
+    {
+      "abbreviation": "ung",
+      "latin": "unguentum",
+      "meaning": "ointment; salve",
+      "category": "form",
+      "usage_example": "Ung. Calendulae = Calendula Ointment",
+      "notes": "Refers to semi-solid topical preparations. In herbal practice, typically oil-and-beeswax based."
+    },
+    {
+      "abbreviation": "q.h.",
+      "latin": "quaque hora",
+      "meaning": "every hour",
+      "category": "frequency",
+      "usage_example": "Sig: 10 gtt q.h. during acute phase = Take 10 drops every hour during acute phase",
+      "notes": "Used in acute dosing protocols. Variations: q.2h. (every 2 hours), q.4h. (every 4 hours), q.6h. (every 6 hours)."
+    },
+    {
+      "abbreviation": "ss",
+      "latin": "semis",
+      "meaning": "one half",
+      "category": "quantity",
+      "usage_example": "\u2125ss = half an ounce; gr ss = half a grain",
+      "notes": "Placed after the unit symbol. Written as a subscript or lowercase 'ss' in handwritten prescriptions."
+    },
+    {
+      "abbreviation": "fl",
+      "latin": "fluidus",
+      "meaning": "fluid (prefix for liquid measures)",
+      "category": "quantity",
+      "usage_example": "fl\u2125 = fluid ounce; fl\u0292 = fluid dram",
+      "notes": "Also written as 'fld'. Distinguishes liquid measures from weight measures of the same name."
+    },
+    {
+      "abbreviation": "fld",
+      "latin": "fluidus",
+      "meaning": "fluid (prefix for liquid measures)",
+      "category": "quantity",
+      "usage_example": "Fld. Ext. = Fluid Extract (1:1 concentration)",
+      "notes": "Alternative form of 'fl'. 'Fluid extract' (fluidextractum) is a specific 1:1 preparation in pharmacopeial terminology."
+    },
+    {
+      "abbreviation": "lot",
+      "latin": "lotio",
+      "meaning": "lotion",
+      "category": "form",
+      "usage_example": "Lot. Calaminae = Calamine Lotion",
+      "notes": "A liquid topical preparation, thinner than an ointment or cream."
+    },
+    {
+      "abbreviation": "inf",
+      "latin": "infusum",
+      "meaning": "infusion",
+      "category": "form",
+      "usage_example": "Inf. Chamomillae = Infusion of Chamomile",
+      "notes": "An aqueous extract made by pouring hot water over herb material and steeping. Distinguished from decoction by method."
+    },
+    {
+      "abbreviation": "dec",
+      "latin": "decoctum",
+      "meaning": "decoction",
+      "category": "form",
+      "usage_example": "Dec. Glycyrrhizae = Decoction of Licorice",
+      "notes": "An aqueous extract made by simmering herb material in water. Used for roots, barks, and hard plant parts."
+    },
+    {
+      "abbreviation": "disp",
+      "latin": "dispensa",
+      "meaning": "dispense",
+      "category": "instruction",
+      "usage_example": "Disp: \u2125iv = Dispense 4 ounces",
+      "notes": "Instruction to the pharmacist/herbalist indicating the quantity to provide to the patient."
+    }
+  ],
+  "roman_numeral_convention": {
+    "description": "Quantities written as lowercase Roman numerals after unit symbol",
+    "examples": ["\u2125iv = 4 ounces", "gr x = 10 grains", "gtt iii = 3 drops", "\u2125ss = half an ounce"],
+    "values": {
+      "i": 1,
+      "ii": 2,
+      "iii": 3,
+      "iv": 4,
+      "v": 5,
+      "vi": 6,
+      "vii": 7,
+      "viii": 8,
+      "ix": 9,
+      "x": 10,
+      "xii": 12,
+      "xv": 15,
+      "xx": 20,
+      "xxx": 30
+    }
+  }
+}

@@ -1,0 +1,486 @@
+"""Batch Log Generator.
+
+Generates a formatted, printable batch record from user-entered details
+about an herbal preparation. Outputs as styled HTML (viewable and printable
+in the browser) and as a downloadable text file.
+"""
+
+import tempfile
+from datetime import datetime
+from pathlib import Path
+
+import gradio as gr
+
+
+# ---------------------------------------------------------------------------
+# Preparation type choices
+# ---------------------------------------------------------------------------
+
+PREPARATION_TYPES: list[str] = [
+    "Tincture",
+    "Glycerite",
+    "Acetum",
+    "Infusion",
+    "Decoction",
+    "Syrup",
+    "Oil Infusion",
+    "Salve",
+]
+
+
+# ---------------------------------------------------------------------------
+# HTML generation
+# ---------------------------------------------------------------------------
+
+def _generate_html(
+    herb_name: str,
+    latin_name: str,
+    herb_source: str,
+    lot_number: str,
+    herb_weight_g: float,
+    preparation_type: str,
+    menstruum_details: str,
+    start_date: str,
+    target_finish_date: str,
+    notes: str,
+) -> str:
+    """Generate a styled HTML batch record.
+
+    Args:
+        All fields from the batch log form.
+
+    Returns:
+        Complete HTML string for display and printing.
+    """
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # Escape HTML special characters to prevent injection
+    def esc(text: str) -> str:
+        return (
+            str(text)
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+        )
+
+    try:
+        weight_str = f"{float(herb_weight_g):.1f} g"
+    except (TypeError, ValueError):
+        weight_str = esc(str(herb_weight_g))
+
+    html = f"""
+<style>
+  .batch-log {{
+    font-family: "Georgia", "Times New Roman", serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px;
+    border: 2px solid #333;
+    background: #fefefe;
+    color: #222;
+  }}
+  .batch-log h2 {{
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 1.4em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+  }}
+  .batch-log .subtitle {{
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 16px;
+    color: #555;
+    font-size: 0.9em;
+  }}
+  .batch-log table {{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+  }}
+  .batch-log th {{
+    text-align: left;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    width: 35%;
+    font-weight: bold;
+    font-size: 0.95em;
+  }}
+  .batch-log td {{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    font-size: 0.95em;
+  }}
+  .batch-log .notes-section {{
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    min-height: 60px;
+    white-space: pre-wrap;
+    font-size: 0.95em;
+  }}
+  .batch-log .footer {{
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 16px;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+  }}
+  .batch-log .signature-line {{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }}
+  .batch-log .sig-field {{
+    border-top: 1px solid #333;
+    width: 45%;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 0.85em;
+    color: #555;
+  }}
+  @media print {{
+    .batch-log {{
+      border: 1px solid #000;
+      box-shadow: none;
+    }}
+  }}
+</style>
+
+<div class="batch-log">
+  <h2>Herbal Preparation Batch Record</h2>
+  <div class="subtitle">{esc(preparation_type)}</div>
+
+  <table>
+    <tr>
+      <th>Herb (common name)</th>
+      <td>{esc(herb_name) if herb_name else "<em>Not specified</em>"}</td>
+    </tr>
+    <tr>
+      <th>Latin / botanical name</th>
+      <td><em>{esc(latin_name) if latin_name else "Not specified"}</em></td>
+    </tr>
+    <tr>
+      <th>Source / supplier</th>
+      <td>{esc(herb_source) if herb_source else "<em>Not specified</em>"}</td>
+    </tr>
+    <tr>
+      <th>Lot / batch number</th>
+      <td>{esc(lot_number) if lot_number else "<em>Not specified</em>"}</td>
+    </tr>
+    <tr>
+      <th>Herb weight</th>
+      <td>{weight_str}</td>
+    </tr>
+    <tr>
+      <th>Preparation type</th>
+      <td>{esc(preparation_type)}</td>
+    </tr>
+    <tr>
+      <th>Menstruum / solvent details</th>
+      <td>{esc(menstruum_details) if menstruum_details else "<em>Not specified</em>"}</td>
+    </tr>
+    <tr>
+      <th>Start date</th>
+      <td>{esc(start_date) if start_date else "<em>Not specified</em>"}</td>
+    </tr>
+    <tr>
+      <th>Target finish date</th>
+      <td>{esc(target_finish_date) if target_finish_date else "<em>Not specified</em>"}</td>
+    </tr>
+  </table>
+
+  <strong>Notes:</strong>
+  <div class="notes-section">{esc(notes) if notes else "(none)"}</div>
+
+  <div class="signature-line">
+    <div class="sig-field">Prepared by</div>
+    <div class="sig-field">Date verified</div>
+  </div>
+
+  <div class="footer">
+    Generated by HerbCalc &mdash; {generated_at}
+  </div>
+</div>
+"""
+    return html
+
+
+def _generate_text(
+    herb_name: str,
+    latin_name: str,
+    herb_source: str,
+    lot_number: str,
+    herb_weight_g: float,
+    preparation_type: str,
+    menstruum_details: str,
+    start_date: str,
+    target_finish_date: str,
+    notes: str,
+) -> str:
+    """Generate a plain-text version of the batch record for download.
+
+    Returns:
+        Formatted plain text string.
+    """
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    try:
+        weight_str = f"{float(herb_weight_g):.1f} g"
+    except (TypeError, ValueError):
+        weight_str = str(herb_weight_g)
+
+    divider = "=" * 56
+
+    text = f"""
+{divider}
+       HERBAL PREPARATION BATCH RECORD
+              {preparation_type}
+{divider}
+
+Herb (common name)      : {herb_name or '(not specified)'}
+Latin / botanical name   : {latin_name or '(not specified)'}
+Source / supplier        : {herb_source or '(not specified)'}
+Lot / batch number       : {lot_number or '(not specified)'}
+Herb weight              : {weight_str}
+Preparation type         : {preparation_type}
+Menstruum / solvent      : {menstruum_details or '(not specified)'}
+Start date               : {start_date or '(not specified)'}
+Target finish date       : {target_finish_date or '(not specified)'}
+
+{"-" * 56}
+NOTES:
+{notes or '(none)'}
+
+{"-" * 56}
+
+Prepared by: ________________________
+
+Date verified: ______________________
+
+{divider}
+Generated by HerbCalc -- {generated_at}
+{divider}
+""".strip()
+    return text
+
+
+# ---------------------------------------------------------------------------
+# Compute function
+# ---------------------------------------------------------------------------
+
+def _compute(
+    herb_name: str,
+    latin_name: str,
+    herb_source: str,
+    lot_number: str,
+    herb_weight_g: float,
+    preparation_type: str,
+    menstruum_details: str,
+    start_date: str,
+    target_finish_date: str,
+    notes: str,
+) -> tuple[str, str | None]:
+    """Generate batch log HTML and downloadable text file.
+
+    Returns:
+        Tuple of (html_string, filepath_for_download_or_None).
+    """
+    try:
+        html = _generate_html(
+            herb_name,
+            latin_name,
+            herb_source,
+            lot_number,
+            herb_weight_g,
+            preparation_type,
+            menstruum_details,
+            start_date,
+            target_finish_date,
+            notes,
+        )
+
+        text = _generate_text(
+            herb_name,
+            latin_name,
+            herb_source,
+            lot_number,
+            herb_weight_g,
+            preparation_type,
+            menstruum_details,
+            start_date,
+            target_finish_date,
+            notes,
+        )
+
+        # Write text to a temporary file for download
+        safe_name = "".join(
+            c if c.isalnum() or c in "-_ " else "_"
+            for c in (herb_name or "batch")
+        ).strip()
+        filename = f"batch_log_{safe_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+
+        tmp_dir = Path(tempfile.gettempdir()) / "herbcalc_batch_logs"
+        tmp_dir.mkdir(exist_ok=True)
+        filepath = tmp_dir / filename
+        filepath.write_text(text, encoding="utf-8")
+
+        return html, str(filepath)
+
+    except Exception as exc:
+        error_html = (
+            f'<div style="color: red; padding: 16px;">'
+            f"<strong>Error generating batch log:</strong> {exc}</div>"
+        )
+        return error_html, None
+
+
+# ---------------------------------------------------------------------------
+# Gradio Tab
+# ---------------------------------------------------------------------------
+
+def build_tab() -> gr.Tab:
+    """Build and return the Batch Log Generator tab."""
+    with gr.Tab("Batch Log") as tab:
+        gr.Markdown(
+            "## Batch Log Generator\n"
+            "Create a formatted, printable batch record for your herbal "
+            "preparation. Fill in the details below and generate."
+        )
+
+        with gr.Row():
+            with gr.Column():
+                gr.Markdown("### Herb Details")
+                herb_name = gr.Textbox(
+                    label="Herb name (common)",
+                    placeholder="e.g., Echinacea",
+                )
+                latin_name = gr.Textbox(
+                    label="Latin / botanical name",
+                    placeholder="e.g., Echinacea purpurea",
+                )
+                herb_source = gr.Textbox(
+                    label="Source / supplier",
+                    placeholder="e.g., Mountain Rose Herbs",
+                )
+                lot_number = gr.Textbox(
+                    label="Lot / batch number",
+                    placeholder="e.g., MRH-2026-0412",
+                )
+                herb_weight_g = gr.Number(
+                    label="Herb weight (grams)",
+                    value=100,
+                    minimum=0,
+                )
+
+            with gr.Column():
+                gr.Markdown("### Preparation Details")
+                preparation_type = gr.Dropdown(
+                    label="Preparation type",
+                    choices=PREPARATION_TYPES,
+                    value="Tincture",
+                )
+                menstruum_details = gr.Textbox(
+                    label="Menstruum / solvent details",
+                    placeholder="e.g., 60% ethanol (from 94% Everclear), 1:5 ratio, 500 mL total",
+                    lines=2,
+                )
+                start_date = gr.Textbox(
+                    label="Start date",
+                    placeholder="e.g., 2026-02-17",
+                )
+                target_finish_date = gr.Textbox(
+                    label="Target finish date",
+                    placeholder="e.g., 2026-04-17 (6-8 weeks for tincture)",
+                )
+                notes = gr.Textbox(
+                    label="Notes",
+                    placeholder="Any observations, variations from protocol, sensory notes, etc.",
+                    lines=3,
+                )
+
+        generate_btn = gr.Button("Generate Batch Log", variant="primary")
+
+        gr.Markdown("### Batch Record")
+        html_output = gr.HTML(value="")
+        file_output = gr.File(label="Download as text file")
+
+        generate_btn.click(
+            fn=_compute,
+            inputs=[
+                herb_name,
+                latin_name,
+                herb_source,
+                lot_number,
+                herb_weight_g,
+                preparation_type,
+                menstruum_details,
+                start_date,
+                target_finish_date,
+                notes,
+            ],
+            outputs=[html_output, file_output],
+        )
+
+        # Pedagogical accordion
+        with gr.Accordion("Why keep batch logs?", open=False):
+            gr.Markdown("""
+Batch logging is one of the most important habits a serious herbalist
+can develop. Even if you never sell a single product, systematic records
+transform your practice from guesswork into a body of reliable personal
+knowledge.
+
+---
+
+#### Reproducibility
+
+The tincture that worked beautifully for your client's insomnia last
+winter -- can you make it again? Without a batch record, you are relying
+on memory for herb weight, alcohol percentage, maceration time, and
+every other variable. A batch log ensures you can replicate successes
+and avoid repeating failures.
+
+#### Troubleshooting
+
+If a tincture turns out weak, cloudy, or off-flavour, the batch log
+is your diagnostic tool. Was the herb from a different supplier? Was
+the maceration period shorter? Did you change the alcohol percentage?
+Without records, you cannot isolate the variable that caused the problem.
+
+#### Safety and traceability
+
+If a client reports an adverse reaction, you need to know exactly what
+was in their preparation, where the herb came from, and when it was
+made. This is not just good practice -- it is an ethical obligation.
+For those who sell preparations, it may also be a legal requirement.
+
+#### Quality improvement over time
+
+Batch logs accumulate into a personal pharmacopoeia. Over years, you
+can compare results across suppliers, seasons, preparation methods,
+and storage conditions. This is how craft knowledge is built.
+
+---
+
+#### What to record
+
+At minimum, a batch record should include:
+
+- **Herb identity:** Common name, Latin binomial, plant part.
+- **Source and lot:** Where you obtained it, any lot or batch number
+  from the supplier.
+- **Weights and volumes:** Herb weight, total menstruum, solvent
+  breakdown.
+- **Preparation parameters:** Ratio, alcohol %, method, temperature.
+- **Dates:** Start date, expected and actual finish dates.
+- **Sensory notes:** Color, aroma, taste of the finished preparation.
+- **Any deviations** from your standard protocol and why.
+
+The more you record, the more useful your logs become over time.
+            """)
+
+    return tab

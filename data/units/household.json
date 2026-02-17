@@ -1,0 +1,177 @@
+[
+  {
+    "unit_name": "drop",
+    "symbol": "gtt",
+    "system": "household",
+    "type": "volume",
+    "to_base": 0.05,
+    "base_unit": "milliliter",
+    "aliases": ["gtt", "drop", "drops"],
+    "precise": false,
+    "variance_note": "Drops vary by viscosity, dropper geometry, temperature, and surface tension. Range: 0.03-0.07 mL. This value (0.05 mL) is a convention, not a measurement.",
+    "regional_variants": []
+  },
+  {
+    "unit_name": "smidgen",
+    "symbol": "smdg",
+    "system": "household",
+    "type": "volume",
+    "to_base": 0.12,
+    "base_unit": "milliliter",
+    "aliases": ["smdg", "smidgen", "smidgens", "smidge"],
+    "precise": false,
+    "variance_note": "Novelty measuring spoon size. Approximately 1/32 teaspoon. Rarely used in herbal practice.",
+    "regional_variants": []
+  },
+  {
+    "unit_name": "pinch",
+    "symbol": "pn",
+    "system": "household",
+    "type": "volume",
+    "to_base": 0.36,
+    "base_unit": "milliliter",
+    "aliases": ["pn", "pinch", "pinches"],
+    "precise": false,
+    "variance_note": "Approximately 1/16 teaspoon. Highly variable depending on finger size and material density.",
+    "regional_variants": []
+  },
+  {
+    "unit_name": "dash",
+    "symbol": "ds",
+    "system": "household",
+    "type": "volume",
+    "to_base": 0.62,
+    "base_unit": "milliliter",
+    "aliases": ["ds", "dash", "dashes"],
+    "precise": false,
+    "variance_note": "Approximately 1/8 teaspoon. Common in culinary contexts but too imprecise for formulation.",
+    "regional_variants": []
+  },
+  {
+    "unit_name": "teaspoon",
+    "symbol": "tsp",
+    "system": "household",
+    "type": "volume",
+    "to_base": 4.92892,
+    "base_unit": "milliliter",
+    "aliases": ["tsp", "teaspoon", "teaspoons", "t"],
+    "precise": true,
+    "variance_note": "US standard teaspoon. FDA and NIST define as 5 mL for labeling; actual US customary measure is 4.929 mL.",
+    "regional_variants": [
+      { "region": "FDA_labeling", "name": "FDA teaspoon", "to_base": 5.0 }
+    ]
+  },
+  {
+    "unit_name": "dessertspoon",
+    "symbol": "dsp",
+    "system": "household",
+    "type": "volume",
+    "to_base": 9.85784,
+    "base_unit": "milliliter",
+    "aliases": ["dsp", "dessertspoon", "dessertspoons", "dstspn"],
+    "precise": true,
+    "variance_note": "2 teaspoons. Common in UK/AU dosing instructions. Not standard in US household use.",
+    "regional_variants": [
+      { "region": "metric", "name": "Metric dessertspoon", "to_base": 10.0 }
+    ]
+  },
+  {
+    "unit_name": "tablespoon",
+    "symbol": "Tbsp",
+    "system": "household",
+    "type": "volume",
+    "to_base": 14.78676,
+    "base_unit": "milliliter",
+    "aliases": ["Tbsp", "tbsp", "tablespoon", "tablespoons", "T"],
+    "precise": true,
+    "variance_note": "US standard tablespoon = 3 teaspoons. FDA labels round to 15 mL.",
+    "regional_variants": [
+      { "region": "AU", "name": "Australian tablespoon", "to_base": 20.0 },
+      { "region": "FDA_labeling", "name": "FDA tablespoon", "to_base": 15.0 }
+    ]
+  },
+  {
+    "unit_name": "fluid_ounce",
+    "symbol": "fl oz",
+    "system": "household",
+    "type": "volume",
+    "to_base": 29.5735,
+    "base_unit": "milliliter",
+    "aliases": ["fl oz", "fluid ounce", "fluid ounces", "fl. oz.", "floz"],
+    "precise": true,
+    "variance_note": "US fluid ounce. Imperial fluid ounce is slightly smaller (28.4131 mL).",
+    "regional_variants": [
+      { "region": "imperial", "name": "Imperial fluid ounce", "to_base": 28.4131 }
+    ]
+  },
+  {
+    "unit_name": "cup",
+    "symbol": "cup",
+    "system": "household",
+    "type": "volume",
+    "to_base": 236.588,
+    "base_unit": "milliliter",
+    "aliases": ["cup", "cups", "c"],
+    "precise": true,
+    "variance_note": "US customary cup = 8 US fluid ounces. Metric and Imperial cups differ significantly.",
+    "regional_variants": [
+      { "region": "metric", "name": "Metric cup", "to_base": 250.0 },
+      { "region": "imperial", "name": "Imperial cup", "to_base": 284.131 },
+      { "region": "Japanese", "name": "Japanese cup (gou)", "to_base": 180.39 }
+    ]
+  },
+  {
+    "unit_name": "pint",
+    "symbol": "pt",
+    "system": "household",
+    "type": "volume",
+    "to_base": 473.176,
+    "base_unit": "milliliter",
+    "aliases": ["pt", "pint", "pints"],
+    "precise": true,
+    "variance_note": "US liquid pint = 16 US fluid ounces. Imperial pint is 20% larger.",
+    "regional_variants": [
+      { "region": "imperial", "name": "Imperial pint", "to_base": 568.261 }
+    ]
+  },
+  {
+    "unit_name": "quart",
+    "symbol": "qt",
+    "system": "household",
+    "type": "volume",
+    "to_base": 946.353,
+    "base_unit": "milliliter",
+    "aliases": ["qt", "quart", "quarts"],
+    "precise": true,
+    "variance_note": "US liquid quart = 2 US pints = 32 US fluid ounces.",
+    "regional_variants": [
+      { "region": "imperial", "name": "Imperial quart", "to_base": 1136.52 }
+    ]
+  },
+  {
+    "unit_name": "gallon",
+    "symbol": "gal",
+    "system": "household",
+    "type": "volume",
+    "to_base": 3785.41,
+    "base_unit": "milliliter",
+    "aliases": ["gal", "gallon", "gallons"],
+    "precise": true,
+    "variance_note": "US liquid gallon = 4 US quarts = 128 US fluid ounces.",
+    "regional_variants": [
+      { "region": "imperial", "name": "Imperial gallon", "to_base": 4546.09 }
+    ]
+  },
+  {
+    "unit_name": "dropperful",
+    "symbol": "drpfl",
+    "system": "household",
+    "type": "volume",
+    "to_base": 0.75,
+    "base_unit": "milliliter",
+    "aliases": ["drpfl", "dropperful", "dropperfuls", "dropper full", "dropper-full"],
+    "precise": false,
+    "variance_note": "A standard 1 mL glass dropper, squeezed once, typically delivers 0.5-1.0 mL. The 0.75 mL value is a midpoint estimate. Actual volume depends on dropper geometry, squeeze force, and liquid viscosity. Always verify with calibration.",
+    "regional_variants": []
+  }
+]
