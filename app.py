@@ -76,7 +76,7 @@ with gr.Blocks(
 
     gr.Markdown(
         "*CC BY 4.0 International — "
-        "[HerbCalc Project](https://github.com/potlatchdiscordian/herbcalc)*"
+        "[HerbCalc Project](https://github.com/johncourie/herbcalc)*"
     )
 
 if __name__ == "__main__":
