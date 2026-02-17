@@ -38,35 +38,41 @@ with gr.Blocks(
     )
 
     with gr.Tabs():
-        # Domain 1: Unit Translation
-        unit_converter.build_tab()
-        apothecary.build_tab()
-        pharmacy_shorthand.build_tab()
-        drop_calibration.build_tab()
-        percentage_expr.build_tab()
+        with gr.Tab("Unit Translation"):
+            with gr.Tabs():
+                unit_converter.build_tab()
+                apothecary.build_tab()
+                pharmacy_shorthand.build_tab()
+                drop_calibration.build_tab()
+                percentage_expr.build_tab()
 
-        # Domain 2: Solvent Systems
-        menstruum_calc.build_tab()
-        pearson_square.build_tab()
-        solvent_affinity.build_tab()
+        with gr.Tab("Solvent Systems"):
+            with gr.Tabs():
+                menstruum_calc.build_tab()
+                pearson_square.build_tab()
+                solvent_affinity.build_tab()
 
-        # Domain 3: Formulation
-        formula_builder.build_tab()
-        dose_calc.build_tab()
-        dry_extract.build_tab()
+        with gr.Tab("Formulation"):
+            with gr.Tabs():
+                formula_builder.build_tab()
+                dose_calc.build_tab()
+                dry_extract.build_tab()
 
-        # Domain 4: Preparation Calculators
-        infusion_calc.build_tab()
-        syrup_calc.build_tab()
-        salve_calc.build_tab()
+        with gr.Tab("Preparation"):
+            with gr.Tabs():
+                infusion_calc.build_tab()
+                syrup_calc.build_tab()
+                salve_calc.build_tab()
 
-        # Domain 5: Quality & Safety
-        interaction_check.build_tab()
-        batch_log.build_tab()
+        with gr.Tab("Quality & Safety"):
+            with gr.Tabs():
+                interaction_check.build_tab()
+                batch_log.build_tab()
 
-        # Domain 6: Reference
-        monograph_viewer.build_tab()
-        reverse_lookup.build_tab()
+        with gr.Tab("Reference"):
+            with gr.Tabs():
+                monograph_viewer.build_tab()
+                reverse_lookup.build_tab()
 
     gr.Markdown(
         "*CC BY 4.0 International — "
