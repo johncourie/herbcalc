@@ -195,7 +195,7 @@ def build_tab() -> gr.Tab:
             ],
             headers=["Herb Name", "Parts", "Ratio", "Alcohol %"],
             datatype=["str", "number", "number", "number"],
-            column_count=4,
+            col_count=4,
             row_count=3,
             interactive=True,
             label="Formula herbs",
