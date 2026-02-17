@@ -1,1 +1,1 @@
-# Dependencies are managed via HuggingFace Space SDK config (see README.md frontmatter)
+pydantic<2.11
