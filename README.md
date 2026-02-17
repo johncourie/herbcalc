@@ -11,7 +11,7 @@ license: cc-by-4.0
 ---
 
 <p align="center">
-  <img src="assets/herbcalc.png" alt="HerbCalc logo" width="200">
+  <img src="https://raw.githubusercontent.com/johncourie/herbcalc/main/assets/herbcalc.png" alt="HerbCalc logo" width="200">
 </p>
 
 # HerbCalc: Tools for Herbalists
