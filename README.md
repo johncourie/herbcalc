@@ -6,7 +6,7 @@ HerbCalc helps you go from "I have some dried herbs and a bottle of Everclear" t
 
 ---
 
-### **▶ [Use HerbCalc Now](https://huggingface.co/spaces/YOUR_SPACE_HERE)**
+### **▶ [Use HerbCalc Now](https://huggingface.co/spaces/jcourie/herbcalc)**
 
 No download. No account. No installation. Just open the link and start using the tools.
 
@@ -117,7 +117,7 @@ It is released under a **Creative Commons Attribution 4.0 International License*
 ## FAQ
 
 **Do I need to install anything?**
-No. Use the [web version on HuggingFace](https://huggingface.co/spaces/YOUR_SPACE_HERE). It runs in your browser.
+No. Use the [web version on HuggingFace](https://huggingface.co/spaces/jcourie/herbcalc). It runs in your browser.
 
 **Does it work on my phone?**
 Yes. The interface is responsive. Some of the more complex tools (formula builder, batch log) are easier on a larger screen, but everything functions on mobile.
@@ -129,7 +129,7 @@ No. HerbCalc doesn't store any information you enter. Each session is independen
 Not the web version. If you need offline access, you can run it locally on your own computer (see Developer section below). Alternatively, use the batch log generator to print reference sheets before heading to the bench.
 
 **I found a data error / I want to suggest a herb to add.**
-Please open an issue on the [GitHub repository](https://github.com/YOUR_USERNAME/herbcalc/issues) or contact me directly. Corrections and additions are welcome — especially for monograph data and interaction flags.
+Please open an issue on the [GitHub repository](https://github.com/johncourie/herbcalc/issues) or contact me directly. Corrections and additions are welcome — especially for monograph data and interaction flags.
 
 **Can I use this for my own teaching?**
 Absolutely. CC BY 4.0 means you can use, share, adapt, and build on it as long as you provide attribution. If you're teaching herbalism and want to integrate HerbCalc into your curriculum, go for it.
@@ -150,7 +150,7 @@ The rest of this README is for people who want to run HerbCalc locally, contribu
 ### Local Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/herbcalc.git
+git clone https://github.com/johncourie/herbcalc.git
 cd herbcalc
 pip install -r requirements.txt
 python app.py
