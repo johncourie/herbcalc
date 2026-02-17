@@ -29,6 +29,7 @@ from tools import (
 
 with gr.Blocks(
     title="HerbCalc: Tools for Herbalists",
+    theme=gr.themes.Soft(),
 ) as app:
     gr.Markdown(
         "# HerbCalc: Tools for Herbalists\n"
@@ -73,4 +74,4 @@ with gr.Blocks(
     )
 
 if __name__ == "__main__":
-    app.launch(theme=gr.themes.Soft())
+    app.launch()
